@@ -62,7 +62,7 @@ func PasswordPrompt(label string) string {
 	return s
 }
 
-func lockedBin() bool {
+func LockedBin() bool {
 	passwordEntry := PasswordPrompt("Password: ")
 	newHashed, _ := hashPassword(passwordEntry)
 	var oldHashed string
@@ -82,12 +82,12 @@ func lockedBin() bool {
 	} else {
 		savePassword(newHashed)
 		fmt.Println("Saving password")
-		return lockedBin()
+		return LockedBin()
 	}
 
 }
 
 // I need to change something
 func main() {
-	lockedBin()
+	LockedBin()
 }
