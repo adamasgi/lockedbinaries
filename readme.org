@@ -1,0 +1,4 @@
+* Purpose
+I want to try and embed a password into my Go binaries to block execution of an app
+
+* ALPHA
