@@ -62,6 +62,18 @@ func PasswordPrompt(label string) string {
 	return s
 }
 
+func LockedEmbed(oldHash string) bool {
+	passwordEntry := PasswordPrompt("Password: ")
+	match := doPasswordsMatch(oldHash, passwordEntry)
+	if match {
+		fmt.Println("Match")
+		return true
+	} else {
+		fmt.Println("No Match")
+		return false
+	}
+}
+
 func LockedBin() bool {
 	passwordEntry := PasswordPrompt("Password: ")
 	newHashed, _ := hashPassword(passwordEntry)
