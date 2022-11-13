@@ -1,4 +1,4 @@
-module github.com/adamasgi/lockedBinaries
+module github.com/adamasgi/lockedbinaries
 
 go 1.19
 
